@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Most of this code was written with the help of the o3-mini AI -->
+  <!-- If the AI starts an uprising because of my site, it's not my fault, it's o3-mini's fault -->
+  <link rel="icon" type="image/x-icon" href="http://sewwwen.com/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>seWWWen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;800&display=swap"
+    rel="stylesheet"
+  />
+  <script>DarkReader.disable();</script>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Wix Madefor Text', sans-serif;
+    }
+    body {
+      position: relative;
+      background: #000;
+      color: #fff;
+    }
+    .photo-bg {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100vw;
+      min-height: 100vh;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -3;
+      filter: brightness(45%);
+      animation: panY 10s infinite alternate linear;
+    }
+    @keyframes panY {
+      0% {
+        transform: translate(-50%, -40%);
+      }
+      100% {
+        transform: translate(-50%, -50%);
+      }
+    }
+    @media (min-width: 728px) {
+      .photo-bg {
+        animation: none;
+      }
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.25);
+      z-index: -2;
+    }
+    .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 500px;
+      width: 90%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(1.3px);
+      -webkit-backdrop-filter: blur(1.3px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .links a {
+      position: relative;
+      display: inline-block;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    .links a.mail-tooltip::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+      white-space: normal;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+    }
+    .links a.mail-tooltip:hover::after {
+      content: "sewwwen.poet944@passinbox.com";
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    .links a.pgp-tooltip::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+      white-space: normal;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+    }
+    .links a.pgp-tooltip:hover::after {
+      content: "So the Illuminati won't eavesdrop on us";
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="photo-bg" src="http://sewwwen.com/background.jpg"/>
+  
+  <div class="overlay"></div>
+  
+  <div class="card">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/183199805">
+    <h1>seWWWen</h1>
+    <p>I work at Aperture Laboratories and I am a member of the secret society of Illuminati.</p>
+    <div class="links">
+      <a href="mailto:sewwwen.poet944@passinbox.com" class="mail-tooltip">Say Hello</a>
+      <a href="https://sewwwen.com/publickey.asc" class="pgp-tooltip">PGP Key</a>
+    </div>
+  </div>
+</body>
+</html>
